@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.21)  21 NOV 2024 18:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.21)  21 NOV 2024 18:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -795,7 +795,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 8.
- (./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -880,16 +879,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 63.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 63.
- (./main.toc)
+
+No file main.toc.
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- [1
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
+
+
+LaTeX Warning: Reference `tab:featuresList' on page 2 undefined on input line 83.
 
 
 Overfull \hbox (19.07137pt too wide) in paragraph at lines 87--136
@@ -899,6 +902,10 @@ Overfull \hbox (19.07137pt too wide) in paragraph at lines 87--136
 [2
 
 ]
+
+LaTeX Warning: Reference `ref-question-1' on page 3 undefined on input line 150.
+
+
 Overfull \hbox (1.19998pt too wide) in paragraph at lines 150--154
 [][]
  []
@@ -912,6 +919,9 @@ Overfull \hbox (1.19998pt too wide) in paragraph at lines 154--155
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
+
+
+LaTeX Warning: Reference `ref-question-2' on page 3 undefined on input line 160.
 
 
 Overfull \hbox (1.19998pt too wide) in paragraph at lines 160--164
@@ -929,6 +939,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
  []
 
 
+LaTeX Warning: Reference `ref-question-3' on page 3 undefined on input line 170.
+
+
 Overfull \hbox (1.19998pt too wide) in paragraph at lines 170--174
 [][]
  []
@@ -942,6 +955,9 @@ Overfull \hbox (1.19998pt too wide) in paragraph at lines 174--175
 Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
+
+
+LaTeX Warning: Reference `ref-question-4' on page 3 undefined on input line 180.
 
 
 Overfull \hbox (1.19998pt too wide) in paragraph at lines 180--184
@@ -961,6 +977,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
 [3
 
 ]
+
+LaTeX Warning: Reference `ref-question-5' on page 4 undefined on input line 193.
+
+
 Overfull \hbox (1.19998pt too wide) in paragraph at lines 193--197
 [][]
  []
@@ -979,24 +999,36 @@ L3 programming layer <2024-01-22>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1203FD2C0731CEE61934A139E5548DD2;1118.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  1203FD2C0731CEE61934A139E5548DD2;1118.
 runsystem(rm main.pyg)...disabled (restricted).
 
  ) 
 Here is how much of TeX's memory you used:
- 29926 strings out of 474222
- 591497 string characters out of 5748732
- 1944975 words of memory out of 5000000
- 51657 multiletter control sequences out of 15000+600000
+ 29907 strings out of 474222
+ 591274 string characters out of 5748732
+ 1942975 words of memory out of 5000000
+ 51644 multiletter control sequences out of 15000+600000
  612738 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  91i,11n,92p,807b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (4 pages, 256410 bytes).
+Output written on main.pdf (4 pages, 253880 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
+ 104 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  18 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
