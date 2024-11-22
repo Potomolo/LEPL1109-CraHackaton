@@ -149,7 +149,9 @@ The dataset is a real dataset based on a questionnaire carried out in the USA so
 \end{question}
 \begin{answer}\color{blue} 
 % ------------------------------------------------------------
-% TO FILL 
+When the threshold tends to 0, recall approaches its maximum value of 1 because it is the ratio of true positives to the total actual positives, and very few (if any) false negatives occur, since almost everything is classified as positive. However, precision decreases because it is the ratio of true positives to the total predicted positives, and many false positives are included due to the broad classification of positive instances.\\
+
+When the threshold tends to 1, precision approaches 1, as only the most confident positive predictions are retained, significantly reducing false positives. However, recall decreases because many true positives are missed, resulting in a large number of false negatives.
 % ------------------------------------------------------------
 \end{answer}
 
@@ -179,7 +181,10 @@ The dataset is a real dataset based on a questionnaire carried out in the USA so
 \end{question}
 \begin{answer}\color{blue}
 % ------------------------------------------------------------
-% TO FILL 
+If we use linear regression, we can reach the threshold with as few as 5 features, which means we can keep only the 5 questions 
+that are most strongly correlated with diabetes. These questions are related to: GenHlth, HighBP, BMI, Highchol, and Age. 
+Adding more features does not improve the results for either linear regression or logistic regression. For KNN, the results 
+stop improving with 8 features, which means it should retain 3 additional questions related to: Diffwalk, Income, and Physhlth.
 % ------------------------------------------------------------
 \end{answer}
 
