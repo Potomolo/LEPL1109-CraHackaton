@@ -30,12 +30,12 @@
     \begin{tabularx}{\textwidth}{X|X|{c}p{2cm}}
        \textbf{Lastname}  & \textbf{Firstname} & \textbf{Noma} \\
        \hline
-        <Decaluwé> & <Maxime> & 50802200 \\
-        <Defrenne> & <Simon> & 42242200 \\
-        <Mil-Homens Cavaco> & <Mathieu> & 38282200 \\
-        <Peiffer> & <Thibaut> & 47352200 \\ 
-        <Roekens> & <Raphaël> & 70732200 \\ 
-        <Starck> & <Robin> & 88952200 \\ 
+        Decaluwé & Maxime & 50802200 \\
+        Defrenne & Simon & 42242200 \\
+        Mil-Homens Cavaco & Mathieu & 38282200 \\
+        Peiffer & Thibaut & 47352200 \\ 
+        Roekens & Raphaël & 70732200 \\ 
+        Starck & Robin & 88952200 \\ 
     \end{tabularx}
     }}
 % ------------------------------------------------------------
@@ -161,7 +161,8 @@ When the threshold tends to 1, precision approaches 1, as only the most confiden
 \end{question}
 \begin{answer}\color{blue}
 % ------------------------------------------------------------
-Maxime
+In our situation, we want to reduce a maximum the amount of false negative, since the worst case is to tell someone is safe if he's not because he wouldn't heal. Telling someone that he's sick if he's not is less a problem. We then will to maximize the recall of our prediction.
+Knowing that the higher the threshold, the higher the precision and the lower the recall, this means we need to reduce the thresold while still maximizing the F1-score. We then need a thresold below 0.5. 
 % ------------------------------------------------------------
 \end{answer}
 
@@ -171,7 +172,9 @@ Maxime
 \end{question}
 \begin{answer} \color{blue}
 % ------------------------------------------------------------
-Maxime
+The model that fits our wanted recall and F1-score the best, while needing the least possible amount of questions is the linear model. Compared to the others models, it stabilize to these values with only 5 features.
+The logistic method needs as much questions as the linear for the F1-score, but it gives a less lower recall. The KNN method is nearly as good as the linear for both the recall and the F1 score, but needs more features, so more questions (at least 7 questions).
+
 % ------------------------------------------------------------
 \end{answer}
 
