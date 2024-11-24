@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.21)  21 NOV 2024 18:31
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  21 NOV 2024 17:58
+>>>>>>> 919f4c873a33ec18325401f6913c9502e236c162
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -753,8 +757,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count365
 \l__pdf_internal_box=\box93
-)
-No file main.aux.
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -775,8 +778,13 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
+<<<<<<< HEAD
 \c@lstlisting=\count366
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+=======
+\c@lstlisting=\count370
+ (C:\Users\Looping\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+>>>>>>> 919f4c873a33ec18325401f6913c9502e236c162
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count367
 \scratchdimen=\dimen294
@@ -814,7 +822,11 @@ Overfull \hbox (4.89377pt too wide) in paragraph at lines 28--44
 
 \openout5 = `main.pyg'.
 
+<<<<<<< HEAD
 runsystem(pygmentize -S borland -f latex -P commandprefix=PYG > _minted-main/borland.pygstyle)...disabled (restricted).
+=======
+runsystem(latexminted config  --timestamp 20241121175824 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+>>>>>>> 919f4c873a33ec18325401f6913c9502e236c162
 
 
 /home/maxdeca/Unif/Data/LEPL1109-CraHackaton/Hackaton_2/LateX report/main.tex:59: Package catchfile Error: File `_minted-main/borland.pygstyle' not found.
@@ -1018,6 +1030,7 @@ runsystem(rm main.pyg)...disabled (restricted).
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  29904 strings out of 474222
  591235 string characters out of 5748732
  1942975 words of memory out of 5000000
@@ -1027,6 +1040,17 @@ Here is how much of TeX's memory you used:
  91i,11n,92p,807b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
 Output written on main.pdf (4 pages, 253880 bytes).
+=======
+ 30863 strings out of 473899
+ 643783 string characters out of 5725556
+ 1158146 words of memory out of 5000000
+ 53221 multiletter control sequences out of 15000+600000
+ 612738 words of font info for 69 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 100i,11n,104p,875b,925s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (4 pages, 266406 bytes).
+>>>>>>> 919f4c873a33ec18325401f6913c9502e236c162
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream
