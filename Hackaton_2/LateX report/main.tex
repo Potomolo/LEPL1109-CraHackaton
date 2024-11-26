@@ -149,7 +149,7 @@ The dataset is a real dataset based on a questionnaire carried out in the USA so
 \end{question}
 \begin{answer}\color{blue} 
 % ------------------------------------------------------------
-When the threshold tends to 0, recall approaches its maximum value of 1 because it is the ratio of true positives to the total actual positives, and very few (if any) false negatives occur, since almost everything is classified as positive. However, precision decreases because it is the ratio of true positives to the total predicted positives, and many false positives are included due to the broad classification of positive instances.\\
+When the threshold goes to 0, recall approaches its maximum value of 1 because it is the ratio of true positives to the total actual positives, and very few (if any) false negatives occur, since almost everything is classified as positive. However, precision decreases because it is the ratio of true positives to the total predicted positives, and many false positives are included due to the broad classification of positive instances.\\
 
 When the threshold tends to 1, precision approaches 1, as only the most confident positive predictions are retained, significantly reducing false positives. However, recall decreases because many true positives are missed, resulting in a large number of false negatives.
 % ------------------------------------------------------------
@@ -161,8 +161,8 @@ When the threshold tends to 1, precision approaches 1, as only the most confiden
 \end{question}
 \begin{answer}\color{blue}
 % ------------------------------------------------------------
-In our situation, we want to reduce a maximum the amount of false negative, since the worst case is to tell someone is safe if he's not because he wouldn't heal. Telling someone that he's sick if he's not is less a problem. We then will to maximize the recall of our prediction.
-Knowing that the higher the threshold, the higher the precision and the lower the recall, this means we need to reduce the thresold while still maximizing the F1-score. We then need a thresold below 0.5. 
+In our situation, we want to reduce as much as possible the amount of false negative, since the worst case is to predict someone is not diabetic while he is positive because that way we would ignore him while him being critically at risk. Telling someone that he is diabetic while he is not is less a problem as we could realize our mistake later on. We then want to maximize the recall of our prediction while maintaining a descent precision through f1 score. 
+Knowing that the higher the threshold, the higher the precision and the lower the recall, for higher recall we need to reduce the thresold : we then need a thresold below 0.5. 
 % ------------------------------------------------------------
 \end{answer}
 
@@ -172,8 +172,8 @@ Knowing that the higher the threshold, the higher the precision and the lower th
 \end{question}
 \begin{answer} \color{blue}
 % ------------------------------------------------------------
-The model that fits our wanted recall and F1-score the best, while needing the least possible amount of questions is the linear model. Compared to the others models, it stabilize to these values with only 5 features.
-The logistic method needs as much questions as the linear for the F1-score, but it gives a less lower recall. The KNN method is nearly as good as the linear for both the recall and the F1 score, but needs more features, so more questions (at least 7 questions).
+The model that fits our desired recall and F1-score the best, while requiring the least possible amount of questions is the linear model. Compared to the others, it reaches these values with only 5 features.
+The logistic method needs as much questions as the linear for the F1-score, but it gives a lower recall. The KNN method is nearly as good as the linear for both the recall and the F1 score, but needs more features, so more questions (at least 7 questions).
 
 % ------------------------------------------------------------
 \end{answer}
@@ -185,7 +185,7 @@ The logistic method needs as much questions as the linear for the F1-score, but 
 \begin{answer}\color{blue}
 % ------------------------------------------------------------
 If we use linear regression, we can reach the threshold with as few as 5 features, which means we can keep only the 5 questions 
-that are most strongly correlated with diabetes. These questions are related to: GenHlth, HighBP, BMI, Highchol, and Age. 
+that are the most correlated with diabetes. These questions are related to: GenHlth, HighBP, BMI, Highchol, and Age. 
 Adding more features does not improve the results for either linear regression or logistic regression. For KNN, the results 
 stop improving with 8 features, which means it should retain 3 additional questions related to: Diffwalk, Income, and Physhlth.
 % ------------------------------------------------------------
