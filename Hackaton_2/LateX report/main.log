@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  26 NOV 2024 12:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  28 NOV 2024 12:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -710,7 +710,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count369
 \l__pdf_internal_box=\box93
-) (main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -732,7 +733,7 @@ LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 \c@lstlisting=\count370
- (C:\Users\Looping\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\Looping\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count371
 \scratchdimen=\dimen291
@@ -771,7 +772,7 @@ Overfull \hbox (4.89377pt too wide) in paragraph at lines 28--44
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write7
 \openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20241126124331 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+runsystem(latexminted config  --timestamp 20241128124503 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
 
 c:/Users/Looping/OneDrive - UCL/Documents/1-UCL Ma/FSA13BA-Q1/LEPL1109-Stats Data/TRAVAIL-1/LEPL1109-CraHackaton/Hackaton_2/LateX report/main.tex:59: Package minted Error: minted v3+ executable is not installed, is not added to PATH, or is not permitted with restricted shell escape; or MiKTeX is being used with -aux-directory or -output-directory without setting a TEXMF_OUTPUT_DIRECTORY environment variable.
@@ -899,8 +900,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
 LaTeX Warning: Reference `ref-question-3' on page 3 undefined on input line 173.
 
+<5_2_F.png, id=34, 395.3169pt x 328.8285pt>
+File: 5_2_F.png Graphic file (type png)
+<use 5_2_F.png>
+Package pdftex.def Info: 5_2_F.png  used on input line 178.
+(pdftex.def)             Requested size: 199.16928pt x 165.66821pt.
+<5_2_R.png, id=36, 395.3169pt x 328.8285pt>
+File: 5_2_R.png Graphic file (type png)
+<use 5_2_R.png>
+Package pdftex.def Info: 5_2_R.png  used on input line 179.
+(pdftex.def)             Requested size: 199.16928pt x 165.66821pt.
 
-Overfull \hbox (1.19998pt too wide) in paragraph at lines 173--179
+Overfull \hbox (1.19998pt too wide) in paragraph at lines 173--182
 [][]
  []
 
@@ -909,49 +920,51 @@ Overfull \hbox (1.19998pt too wide) in paragraph at lines 173--179
 [3
 
 ]
-Overfull \hbox (1.19998pt too wide) in paragraph at lines 179--180
+Overfull \hbox (1.19998pt too wide) in paragraph at lines 182--183
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-LaTeX Warning: Reference `ref-question-4' on page 4 undefined on input line 185.
+LaTeX Warning: Reference `ref-question-4' on page 4 undefined on input line 188.
 
 
-Overfull \hbox (1.19998pt too wide) in paragraph at lines 185--192
+Overfull \hbox (1.19998pt too wide) in paragraph at lines 188--195
 [][]
  []
 
 
-Overfull \hbox (1.19998pt too wide) in paragraph at lines 192--193
+Overfull \hbox (1.19998pt too wide) in paragraph at lines 195--196
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
 
-LaTeX Warning: Reference `ref-question-5' on page 4 undefined on input line 201.
+LaTeX Warning: Reference `ref-question-5' on page 4 undefined on input line 204.
 
 
-Overfull \hbox (1.19998pt too wide) in paragraph at lines 201--205
-[][]
- []
-
-
-Overfull \hbox (1.19998pt too wide) in paragraph at lines 205--207
+Overfull \hbox (1.19998pt too wide) in paragraph at lines 204--208
 [][]
  []
 
 
 
-[4] (main.aux)
+[4 <./5_2_F.png> <./5_2_R.png>]
+Overfull \hbox (1.19998pt too wide) in paragraph at lines 208--210
+[][]
+ []
+
+
+
+[5] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
@@ -976,17 +989,17 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  1203FD2C0731CEE61934A139E5548DD2;1118.
  ) 
 Here is how much of TeX's memory you used:
- 30866 strings out of 473899
- 643840 string characters out of 5725556
- 1155146 words of memory out of 5000000
- 53224 multiletter control sequences out of 15000+600000
+ 30878 strings out of 473899
+ 643894 string characters out of 5725556
+ 1155155 words of memory out of 5000000
+ 53237 multiletter control sequences out of 15000+600000
  612738 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,11n,104p,875b,945s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Looping/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (4 pages, 268710 bytes).
+Output written on main.pdf (5 pages, 298331 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
