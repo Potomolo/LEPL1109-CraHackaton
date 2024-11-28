@@ -172,9 +172,12 @@ Knowing that the higher the threshold, the higher the precision and the lower th
 \end{question}
 \begin{answer} \color{blue}
 % ------------------------------------------------------------
-The model that fits our desired recall and F1-score the best, while requiring the least possible amount of questions is the linear model. Compared to the others, it reaches these values with only 5 features.
-The logistic method needs as much questions as the linear for the F1-score, but it gives a lower recall. The KNN method is nearly as good as the linear for both the recall and the F1 score, but needs more features, so more questions (at least 7 questions).
-
+The model that fits our desired recall and F1-score the best, while requiring the least possible amount of questions is the linear model. Compared to the others, it reaches these values with only 5 features for a thresshold of 0.28.
+The logistic method needs as much questions as the linear for the F1-score, but it gives a lower recall. The KNN method is nearly as good as the logistic for both the recall and the F1 score.
+\begin{center}
+    \includegraphics[width=7cm]{5_2_F.png}
+    \includegraphics[width=7cm]{5_2_R.png}   
+\end{center}
 % ------------------------------------------------------------
 \end{answer}
 
@@ -188,6 +191,11 @@ If we use linear regression, we can reach the threshold with as few as 5 feature
 that are the most correlated with diabetes. These questions are related to: GenHlth, HighBP, BMI, Highchol, and Age. 
 Adding more features does not improve the results for either linear regression or logistic regression. For KNN, the results 
 stop improving with 8 features, which means it should retain 3 additional questions related to: Diffwalk, Income, and Physhlth.
+
+\begin{center}
+    \includegraphics[width=7cm]{BestCorr.png}
+\end{center}
+
 % ------------------------------------------------------------
 \end{answer}
 
