@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1732823099.37545 "/home/maxdeca/Unif/Data/LEPL1109-CraHackaton/Hackaton_2/LateX report/main.tex" "main.pdf" "main" 1732823102.23447 2
+["pdflatex"] 1732876712.4154 "/home/maxdeca/Unif/Data/LEPL1109-CraHackaton/Hackaton_2/LateX report/main.tex" "main.pdf" "main" 1732876715.42201 2
   "/etc/texmf/web2c/texmf.cnf" 1732207311.59122 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/maxdeca/Unif/Data/LEPL1109-CraHackaton/Hackaton_2/LateX report/main.tex" 1732823095.37039 11749 3bb9acd11b847aff7ce3785d9d101055 ""
+  "/home/maxdeca/Unif/Data/LEPL1109-CraHackaton/Hackaton_2/LateX report/main.tex" 1732876708.6528 12064 139b8326ea7f98aa618d0ddf6e8139b7 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1136768653 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -217,11 +217,12 @@
   "5_2_F.png" 1732812914.89555 21222 3ef23cbd3a6214a2d8e36695c8a1f1f0 ""
   "5_2_R.png" 1732812914.89655 19104 21018ca1583b8172fb61a886f41f751e ""
   "BestCorr.png" 1732812914.90055 18595 57a4c19704a1b2bb26ce3f5cea48b84d ""
-  "main.aux" 1732823101.86032 2018 ed66367d57b790e30bf0a02c0c796494 "pdflatex"
-  "main.out" 1732823101.86132 1118 1203fd2c0731cee61934a139e5548dd2 "pdflatex"
-  "main.pyg" 1732823101.18933 30 a289952eecb09e435138f6c3b02c4c6e "pdflatex"
-  "main.tex" 1732823095.37039 11749 3bb9acd11b847aff7ce3785d9d101055 ""
-  "main.toc" 1732823101.86432 679 aa41de65201d2f1e985341fa35043aa1 "pdflatex"
+  "VISUALIZATION_CHART.png" 1732876425.22547 723674 fc9b22fc08c1ad050dc81a609cf9f1ee ""
+  "main.aux" 1732876715.15174 2018 ed66367d57b790e30bf0a02c0c796494 "pdflatex"
+  "main.out" 1732876715.15374 1118 1203fd2c0731cee61934a139e5548dd2 "pdflatex"
+  "main.pyg" 1732876714.01675 30 a289952eecb09e435138f6c3b02c4c6e "pdflatex"
+  "main.tex" 1732876708.6528 12064 139b8326ea7f98aa618d0ddf6e8139b7 ""
+  "main.toc" 1732876715.15574 679 aa41de65201d2f1e985341fa35043aa1 "pdflatex"
   "preamble.tex" 1732010675.57343 4257 3d1e25effca25f905c8d3453c6aad80f ""
   (generated)
   "main.aux"
@@ -231,3 +232,4 @@
   "main.pyg"
   "main.toc"
   (rewritten before read)
+  "main.pyg"
