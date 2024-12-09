@@ -203,8 +203,7 @@ The logistic method needs as much questions as the linear for the F1-score, but 
 % ------------------------------------------------------------
 If we use linear regression, we can reach the threshold with as few as 5 features, which means we can keep only the 5 questions 
 that are the most correlated with diabetes. These questions are related to: GenHlth, HighBP, BMI, Highchol, and Age. 
-Adding more features does not improve the results for either linear regression or logistic regression. For KNN, the results 
-stop improving with 8 features, which means it should retain 3 additional questions related to: Diffwalk, Income, and Physhlth.
+Adding more features does not significantly improve the results for either linear regression or logistic regression.
 
 % ------------------------------------------------------------
 \end{answer}
@@ -222,7 +221,7 @@ This work was articulated into three main parts. First, we analyzed the data and
 Notice from Recall-F1 score curves that at least 5 features are required for logistic and linear regression, and that KNN cannot match those requirements even with all the features. 
 
 \begin{center}
-    \includegraphics[width=11cm]{VISUALIZATION_CHART.png}
+    \includegraphics[width=15cm]{VISUALIZATION_CHART.png}
 \end{center}
 % ------------------------------------------------------------
 \end{answer}

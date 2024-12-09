@@ -98,6 +98,23 @@
 # 
 
 # %% [markdown]
+# 
+# ## Names and Noma of participants:
+# 
+# Part. 1: Decaluwé Maxime - 50802200
+# 
+# Part. 2: Defrenne Simon - 42242200
+# 
+# Part. 3: Mil-Homens Cavaco Mathieu - 38282200
+#  
+# Part. 4: Peiffer Thibaut - 47352200
+# 
+# Part. 5: Roekens Raphaël - 70732200
+# 
+# Part. 6: Starck Robin - 88952200
+# 
+
+# %% [markdown]
 # <br><font size=7 color=#009999> <b>PART I - Preliminaries</b> </font> <br><br>
 
 # %% [markdown]
@@ -237,6 +254,7 @@ def plot_correlation_matrix(data):
 corr_matrix = df.corr(method='pearson')
 plot_correlation_matrix(df)
 
+
 # %% [markdown]
 # After this visualization, it is time to sort the coefficients of correlation to keep them with the best correlation with `Diabetes`. **Be careful** with the sign.
 
@@ -251,7 +269,7 @@ CELL N°2.2 : ANALYZE THE CORRELATION WITH DIABETE
 
 def sort_features(corr_matrix):
     series = corr_matrix['Diabetes'].drop('Diabetes').abs()
-    return series.sort_values(ascending=False).to_list()
+    return series.sort_values(ascending=False).keys().to_list()
 
 sorted_features = sort_features(corr_matrix)
 print(sorted_features)
@@ -279,7 +297,7 @@ CELL N°3.1 : LINEAR REGRESSOR
 """
 
 def linear_regressor(X_train, y_train, threshold = 0.5):
-    linreg = LinearRegression()
+    linreg = LinearRegression(fit_intercept=True)
     linreg.fit(X_train, y_train)
     return lambda X_test : np.where(linreg.predict(X_test)>threshold, 1, 0)
 
@@ -294,7 +312,7 @@ def linear_regressor(X_train, y_train, threshold = 0.5):
 from sklearn.linear_model import LogisticRegression
 """
 CELL N°3.2 : LOGISTIC REGRESSOR
-
+    
 @pre:  `X_train` and `y_train` contain the training set of `df` and a threshold that is a numerical value (float) by default 0.5.
 @post:  Lambda function that takes `X_test` and returns a 1D array of binary predictions (0 or 1) according to the given threshold.
 """
@@ -302,7 +320,7 @@ CELL N°3.2 : LOGISTIC REGRESSOR
 def logistic_regressor(X_train, y_train, threshold = 0.5):
     logreg = LogisticRegression()
     logreg.fit(X_train, y_train)
-    return lambda X_test :  np.where(logreg.predict(X_test)>threshold, 1, 0)
+    return lambda X_test :  np.where(np.array(logreg.predict_proba(X_test))[:, 1]>threshold, 1, 0)
 
 # %% [markdown]
 # **Implement** the *knn_regressor*. Please follow the specifications in the provided template.  <br>
@@ -350,9 +368,9 @@ CELL N°4.1 : PRECISION SCORE
 @post: `precision(y_test, y_pred)` returns the prediction metric based on the predicted labels `y_pred`
        and the true labels `y_test`. 
 """
-from sklearn.metrics import precision_score
+from sklearn.metrics import precision_score as sk_precision_score
 def precision(y_test, y_pred):
-    return precision_score(y_test, y_pred)
+    return sk_precision_score(y_test, y_pred)
 
 # %%
 """
@@ -362,9 +380,9 @@ CELL N°4.2 : RECALL SCORE
 @post: `recall(y_test, y_pred)` returns the recall metric based on the predicted labels `y_pred`
        and the true labels `y_test`. 
 """
-from sklearn.metrics import recall_score
+from sklearn.metrics import recall_score as sk_recall_score
 def recall(y_test, y_pred):
-    return recall_score(y_test,y_pred)
+    return sk_recall_score(y_test,y_pred)
 
 # %%
 """
@@ -374,9 +392,9 @@ CELL N°4.3 : F1 SCORE
 @post: `f1_score(y_test, y_pred)` returns the F1 score metric based on the predicted labels `y_pred`
        and the true labels `y_test`. 
 """
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score as sk_f1_score
 def f1_score(y_test, y_pred):
-    return f1_score(y_test,y_pred)
+    return sk_f1_score(y_test,y_pred)
 
 # %% [markdown]
 # <br><font size=7 color=#009999> <b>PART V - Reduce the questionnaire size</b> </font> <br><br>
@@ -451,7 +469,8 @@ def validation(regressor, X_test, y_test):
     return (recall(y_test, y_pred), precision(y_test, y_pred), f1_score(y_test, y_pred))
 
 # To modify
-threshold = 0.6
+threshold = 0.28
+
 result = {
     "linear":{
         1: (0., 0., 0.),
@@ -469,6 +488,38 @@ result = {
         # and so on
     }
 }
+n_splits = kf.get_n_splits()
+
+for i in range(1,len(df.columns)+1):
+    features = sorted_features[:i]
+    res_knn = 0,0,0
+    res_lin = 0,0,0
+    res_logi = 0,0,0
+    for j,(train_index, test_index) in enumerate(kf.split(X[features])):
+        
+        #print(f"train index {i} = {train_index}")
+        #print(f"test index {i} = {test_index}")
+        
+        X_train, y_train = X[features].iloc[train_index], y.iloc[train_index]
+        X_test,y_test = X[features].iloc[test_index], y.iloc[test_index]
+
+        lin = linear_regressor(X_train,y_train,threshold)
+        knn = knn_regressor(X_train,y_train,threshold)
+        logi = logistic_regressor(X_train,y_train,threshold)
+
+        res_lin = tuple(map(lambda x, y: x + y, res_lin, validation(lin,X_test,y_test)))
+        res_knn = tuple(map(lambda x, y: x + y,res_knn,validation(knn,X_test,y_test)))
+        res_logi = tuple(map(lambda x, y: x + y,res_logi,validation(logi,X_test,y_test)))
+        
+        
+    result["linear"][i] = tuple(res_lin_i/n_splits for res_lin_i in res_lin)
+    result["knn"][i] = tuple(res_knn_i/n_splits for res_knn_i in res_knn)
+    result["logistic"][i] = tuple(res_logi_i/n_splits for res_logi_i in res_logi)
+
+print(result["linear"])
+print(result["knn"])
+print(result["logistic"])
+
 
 # %% [markdown]
 # The following cell allows you to test if the threshold that you chose satisfies the specifications, that are 
@@ -502,30 +553,23 @@ plot_result(result, threshold, to_show = "f1_score")
 # 
 # The **clarity**, **content** and **description** (in the report) of your figure will be evaluated.
 
+# %% [markdown]
+# ![VISUALIZATION_CHART.png](attachment:VISUALIZATION_CHART.png)
+
 # %%
 """
-CELL N°6.1 : VISUALIZE YOUR RESULTS
+CELL N°6.1 : Visualize the five most correlated features
 
-@pre:  /
-@post: /
+@pre:  `corr_matrix`contains de correlation values between the features. 
+       `sorted features` containes features sorted in descending order according to the correlation index with the features `Diabetes`
+@post: plot the bar chart of the five most correlated features and their correlation values.
 """
 
-# To modify
-fig, ax = plt.subplots(figsize=(6, 6))
-fig.patch.set_facecolor("LightBlue") 
-ax.set_facecolor("white")
-ax.text(0.5, 0.5, 'Feel free!', fontsize=40, ha='center', va='center', color='blue', transform=ax.transAxes)
-for spine in ax.spines.values():
-    spine.set_edgecolor("blue")
-    spine.set_linewidth(2)
-ax.set_xticks([])
-ax.set_yticks([])
+plt.figure(figsize=(8, 4))
+plt.bar(sorted_features[:5], corr_matrix['Diabetes'][sorted_features[:5]], color='darkseagreen',edgecolor = 'darkgreen')
+plt.ylabel('correlation')
+plt.title('5 most correlated features')
 plt.show()
-
-# %%
-
-
-# %%
 
 
 
